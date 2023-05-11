@@ -1,0 +1,20 @@
+.navbar-title {
+  font-family: var(--headings-font);
+  color: white;
+}
+select,
+.Nav {
+  font-family: var(--main-font);
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+.navbar-collapse,
+.navbar-collpase a {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.navbar-left {
+  width: 20%;
+}

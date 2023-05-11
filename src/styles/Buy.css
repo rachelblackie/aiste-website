@@ -1,0 +1,8 @@
+.carousel-image {
+  height: 400px;
+  object-fit: contain;
+}
+.carousel-text {
+  background: rgb(255, 255, 255, 0.6);
+}
+

@@ -1,0 +1,30 @@
+.hero-text {
+  position: absolute;
+  top: 40%;
+  width: 30%;
+
+  padding: 25px;
+}
+.hero-background {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  clip-path: circle(66.2% at 81% 50%);
+  position: relative;
+}
+.row {
+  margin-right: none;
+  --bs-gutter-x: none;
+}
+
+@media (max-width: 450px) {
+  .hero-background {
+    clip-path: none;
+  }
+  .hero-text {
+    width: 50%;
+    text-align: center;
+    left: 25%;
+    top: 25%;
+  }
+}
