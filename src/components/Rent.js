@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Rent.css";
 import Carousel from "react-bootstrap/Carousel";
+
 import Form from "react-bootstrap/Form";
 import exampleApartment from "../images/exampleApartment.jpg";
 import exampleHouse from "../images/exampleHouse.jpg";
@@ -50,12 +51,17 @@ function Rent(props) {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </Form.Select>
+            <Form.Group className="m-4">
+              <Form.Label>Dates</Form.Label>
+              <Form.Control type="date" name="date" placeholder="Select Date" />
+            </Form.Group>
           </Form>
           <a href="#" className="btn btn-dark text-center m-4">
             {content.checkButton}
           </a>
         </div>
       </div>
+
       <div className="col-lg m-3">
         <Carousel className="carousel">
           <Carousel.Item>
