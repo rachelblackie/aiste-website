@@ -25,7 +25,7 @@ function Invest(props) {
       <div className="col-lg m-3">
         <h1>{content.title}</h1>
         <p>{content.text}</p>
-        <a href="#" className="btn btn-dark text-center">
+        <a href="#invest-section" className="btn btn-dark text-center">
           {content.learnButton}
         </a>
       </div>

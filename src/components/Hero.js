@@ -1,6 +1,7 @@
 import React from "react";
 import oranges from "../images/oranges.jpeg";
 import "../styles/Hero.css";
+import CurrentWeather from "./CurrentWeather.js";
 
 function Hero(props) {
   let content = {
@@ -31,9 +32,13 @@ function Hero(props) {
           alt="ocean background"
         ></img>
       </div>
-      <div className="my-auto  ms-3 hero-text text-center">
+      <div className="ms-3 hero-text text-center">
         <h1>{content.title}</h1>
         <h3>{content.subtitle}</h3>
+        <hr />
+        <div className="weather m-2 p-2">
+          <CurrentWeather />
+        </div>
       </div>
     </div>
   );

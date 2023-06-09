@@ -42,7 +42,7 @@ function Sell(props) {
               ligula pretium.
             </li>
           </ul>
-          <a href="#" className="btn btn-dark text-center">
+          <a href="#sell-section" className="btn btn-dark text-center">
             {content.learnButton}
           </a>
         </div>

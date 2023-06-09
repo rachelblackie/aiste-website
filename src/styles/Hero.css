@@ -1,6 +1,6 @@
 .hero-text {
   position: absolute;
-  top: 40%;
+  top: 25%;
   width: 30%;
 
   padding: 25px;
@@ -11,6 +11,11 @@
   object-fit: cover;
   clip-path: circle(66.2% at 81% 50%);
   position: relative;
+}
+.weather {
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .row {
   margin-right: none;

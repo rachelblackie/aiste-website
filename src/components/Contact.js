@@ -18,7 +18,7 @@ function Contact(props) {
       <h1>{content.title}</h1>
       <h4 className="contact-info">
         <a
-          href="#"
+          href="#contact-section"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-links"
@@ -28,7 +28,7 @@ function Contact(props) {
       </h4>
       <h4 className="contact-info">
         <a
-          href="#"
+          href="#contact-section"
           target="_blank"
           rel="noopenener noreferrer"
           className="contact-links"

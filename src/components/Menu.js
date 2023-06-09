@@ -36,7 +36,7 @@ function Menu(props) {
         expanded={expanded}
       >
         <Container>
-          <Navbar.Brand href="#" className="navbar-title navbar-left">
+          <Navbar.Brand href="#hero" className="navbar-title navbar-left">
             Aiste Fischetti
           </Navbar.Brand>
           <Navbar.Toggle

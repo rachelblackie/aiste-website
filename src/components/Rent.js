@@ -56,7 +56,7 @@ function Rent(props) {
               <Form.Control type="date" name="date" placeholder="Select Date" />
             </Form.Group>
           </Form>
-          <a href="#" className="btn btn-dark text-center m-4">
+          <a href="#rent-section" className="btn btn-dark text-center m-4">
             {content.checkButton}
           </a>
         </div>
