@@ -29,6 +29,7 @@ function Invest(props) {
           {content.learnButton}
         </a>
       </div>
+      <hr />
     </div>
   );
 }

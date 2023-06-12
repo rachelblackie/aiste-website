@@ -78,6 +78,7 @@ function Buy(props) {
           </Carousel>
         </div>
       </div>
+      <hr />
     </div>
   );
 }

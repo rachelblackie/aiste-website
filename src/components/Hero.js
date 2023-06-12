@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import oranges from "../images/oranges.jpeg";
 import "../styles/Hero.css";
 import CurrentWeather from "./CurrentWeather.js";
 
 function Hero(props) {
+  let languageStoredInLocalStorage = localStorage.getItem("language");
+  let [language, setLanguage] = useState(
+    languageStoredInLocalStorage ? languageStoredInLocalStorage : "English"
+  );
   let content = {
     English: {
       title: (
@@ -36,11 +40,20 @@ function Hero(props) {
         <h1>{content.title}</h1>
         <h3>{content.subtitle}</h3>
         <hr />
-        <div className="weather m-2 p-2">
-          <CurrentWeather />
+        <div className="weather  mx-auto m-2 p-2">
+          <CurrentWeather
+            language={language}
+            handleSetLanguage={(language) => {
+              setLanguage(language);
+              storeLanguageInLocalStorage(language);
+            }}
+          />
         </div>
       </div>
     </div>
   );
+}
+function storeLanguageInLocalStorage(language) {
+  localStorage.setItem("language", language);
 }
 export default Hero;

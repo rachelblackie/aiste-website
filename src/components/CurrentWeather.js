@@ -5,6 +5,17 @@ import WeatherIcon from "./WeatherIcon.js";
 import Time from "react-time-format";
 
 function CurrentWeather(props) {
+  let content = {
+    English: {
+      now: "Currently",
+    },
+    Español: {
+      now: "Actualmente",
+    },
+  };
+  props.language === "Español"
+    ? (content = content.Español)
+    : (content = content.English);
   const [weatherData, setWeatherData] = useState({});
 
   const apiKey = "244c95t3fo3db4e37613c8eecb30fba3";
@@ -21,6 +32,7 @@ function CurrentWeather(props) {
 
   return (
     <div>
+      <h4>{content.now}</h4>
       <h4>
         {Math.round(weatherData.temperature)}°C,{" "}
         <Time value={weatherData.time} format="hh:mm" />

@@ -47,6 +47,7 @@ function Sell(props) {
           </a>
         </div>
       </div>
+      <hr />
     </div>
   );
 }

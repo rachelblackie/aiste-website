@@ -12,6 +12,9 @@ function Rent(props) {
     English: {
       title: "Rent",
       accommodation: "Type of Accommodation",
+      typeOne: "House",
+      typeTwo: "Apartment",
+      typeThree: "Room",
       guests: "Number of Guests",
       dates: "Dates",
       checkButton: "Check Availability",
@@ -19,6 +22,9 @@ function Rent(props) {
     Español: {
       title: "Alquilar",
       accommodation: "Tipo de Alojamiento",
+      typeOne: "Casa",
+      typeTwo: "Piso",
+      typeThree: "Habitación",
       guests: "Número de huéspedes",
       dates: "Fechas",
       checkButton: "Consultar Disponibilidad",
@@ -27,35 +33,32 @@ function Rent(props) {
   props.language === "Español"
     ? (content = content.Español)
     : (content = content.English);
+
   return (
     <div className="row m-5" id="rent-section">
       <div className="col-lg m-3">
         <h1>{content.title}</h1>
         <div className="rent-form me-3">
           <Form>
-            <Form.Select className="m-4">
+            <Form.Select className="m-4 form">
               <option>{content.accommodation}</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">{content.typeOne}</option>
+              <option value="2">{content.typeTwo}</option>
+              <option value="3">{content.typeThree}</option>
             </Form.Select>
-            <Form.Select className="m-4">
-              <option>{content.guests}</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-            <Form.Select className="m-4">
-              <option>{content.dates}</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
-            <Form.Group className="m-4">
-              <Form.Label>Dates</Form.Label>
-              <Form.Control type="date" name="date" placeholder="Select Date" />
+
+            <Form.Group className="m-4 form">
+              <Form.Control type="number" placeholder={content.guests} />
+            </Form.Group>
+            <Form.Group className="m-4 form">
+              <Form.Control
+                type="date"
+                label="hello world"
+                placeholder={content.dates}
+              />
             </Form.Group>
           </Form>
+
           <a href="#rent-section" className="btn btn-dark text-center m-4">
             {content.checkButton}
           </a>
@@ -103,6 +106,7 @@ function Rent(props) {
           </Carousel.Item>
         </Carousel>
       </div>
+      <hr />
     </div>
   );
 }
